@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "exports": "0.0.1",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "express-router": "0.0.1",
     "mysql": "^2.17.1"
   },
   "devDependencies": {},
