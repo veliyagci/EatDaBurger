@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    background: url("../img/burger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 20px;
+    grid-template-areas: "headerSection" "middleSection" "footerSection";
+    grid-row-gap: 10px; }
+    body .center {
+      justify-self: center;
+      align-self: center; }
+    body #headerSection {
+      grid-area: headerSection;
+      background: rgba(255, 0, 0, 0.6);
+      text-align: center;
+      color: white;
+      position: relative;
+      min-height: 100%; }
+      body #headerSection h2 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    body #middleSection {
+      grid-area: middleSection;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "leftMiddle centerMiddle rightMiddle";
+      color: white; }
+      body #middleSection .leftMiddle {
+        display: grid;
+        grid-area: leftMiddle;
+        border: 1px solid white; }
+      body #middleSection .centerMiddle {
+        display: grid;
+        grid-area: centerMiddle;
+        border: 1px solid red; }
+      body #middleSection .rightMiddle {
+        display: grid;
+        grid-area: rightMiddle;
+        border: 1px solid yellow; }
+    body #footerSection {
+      grid-area: footerSection; }
