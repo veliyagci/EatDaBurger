@@ -10,7 +10,12 @@ let PORT = process.env.PORT || 9080; // Set Default Port for Express and Heroku
 app.use(bodyParser.urlencoded({ extended: false })); // Add Additional Functionality to Express Using Middleware body-parser
 app.use(express.static("public")); // Serve Static Content Such as CSS, JS, for the App from the "public" Directory in the Application Directory.
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ 
+    defaultLayout: "main",
+    partialsDir: [
+        path.join(__dirname, 'views/burgers')
+    ] 
+}));
 app.set("view engine", "handlebars");
 
 
