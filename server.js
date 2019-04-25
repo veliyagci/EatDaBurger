@@ -2,7 +2,7 @@
 const express = require("express"); // Server
 const bodyParser = require("body-parser"); // Allows JSON Body from POST Request to be Accessed
 const exphbs = require("express-handlebars"); // Require Templating Engine Handlebars
-
+const path = require("path");
 /////////////////////////////////////////////// /* Configure Server */ //////////////////////////////////////////////////////////
 const app = express(); // Initalise Express Server
 
